@@ -113,3 +113,7 @@ python fdk_pipeline.py score-folder --images-dir data/raw/UNL --site UNL
 ```
 
 The local batch originally used `CSU_IL_` and `CSU_NE_` sample prefixes for these same Illinois and Nebraska files. The examples above use institution names for new runs.
+
+## Preliminary batch results
+
+[View outlined images, detected counts, and predicted FDK percentages](results/README.md). Results are published as scoring completes and remain preliminary automated predictions. See the results page for segmentation limitations and denominator definitions.
