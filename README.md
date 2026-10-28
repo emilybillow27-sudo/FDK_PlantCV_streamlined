@@ -4,7 +4,7 @@ Research software for image-based phenotyping of Fusarium-damaged kernels (FDK) 
 
 ## Project status
 
-This repository contains the pipeline source code. Research images, annotations, trained model weights, and generated results are excluded. A fresh clone requires the model files listed below before scoring can run. Model availability and redistribution terms have not yet been established.
+This repository contains the pipeline source code. UIUC and UNL input images are included through Git LFS. Other research images, annotations, trained model weights, and generated results are excluded. A fresh clone requires the model files listed below before scoring can run. Model availability and redistribution terms have not yet been established.
 
 This is research software under development. Performance should be evaluated for the intended imaging setup and sample population before use.
 
@@ -89,3 +89,27 @@ The script also includes manual review, candidate classifier training, and compa
 ## Licensing
 
 No license has been selected yet. Contact the repository owner about reuse or collaboration.
+
+## Included UIUC and UNL images
+
+The input photographs are stored with **Git LFS**:
+
+- `data/raw/UIUC/`: 160 Illinois photographs
+- `data/raw/UNL/`: 157 Nebraska photographs
+- `data/raw/image_manifest.csv`: file sizes and SHA-256 checksums for all 317 photographs
+
+Install Git LFS before cloning, or retrieve the photographs after cloning:
+
+```bash
+git lfs install
+git lfs pull
+```
+
+The image download is approximately 781 MiB. These are input photographs, not manually verified FDK labels. Trained model weights are still required to score them. With the environment activated and models present:
+
+```bash
+python fdk_pipeline.py score-folder --images-dir data/raw/UIUC --site UIUC
+python fdk_pipeline.py score-folder --images-dir data/raw/UNL --site UNL
+```
+
+The local batch originally used `CSU_IL_` and `CSU_NE_` sample prefixes for these same Illinois and Nebraska files. The examples above use institution names for new runs.

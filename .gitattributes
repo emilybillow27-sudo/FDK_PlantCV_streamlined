@@ -1,0 +1,2 @@
+data/raw/UIUC/** filter=lfs diff=lfs merge=lfs -text
+data/raw/UNL/** filter=lfs diff=lfs merge=lfs -text

@@ -1,5 +1,10 @@
-# Local research data, annotations, model weights, and generated results
-/data/
+# Exclude research assets except the shared UIUC and UNL input images
+/data/*
+!/data/raw/
+/data/raw/*
+!/data/raw/UIUC/
+!/data/raw/UNL/
+!/data/raw/image_manifest.csv
 /MoodBackground/
 
 # Python environments and caches
