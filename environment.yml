@@ -1,0 +1,9 @@
+name: fdk-phenotyping
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11.16
+  - pip
+  - tk
+  - pip:
+      - -r requirements.txt

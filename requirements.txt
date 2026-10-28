@@ -1,8 +1,11 @@
-joblib
-numpy
-Pillow
-scikit-image
-scipy
-scikit-learn
-torch
-ultralytics
+# Versions from the working fdk-yolo-clean environment (Python 3.11.16).
+# Keep scikit-learn aligned with the serialized model bundles.
+joblib==1.6.0
+numpy==2.4.6
+Pillow==12.3.0
+scikit-image==0.26.0
+scipy==1.17.1
+scikit-learn==1.9.1
+torch==2.14.0
+torchvision==0.29.0
+ultralytics==8.4.160

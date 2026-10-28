@@ -10,15 +10,35 @@ This is research software under development. Performance should be evaluated for
 
 ## Setup
 
-Create and activate a Python environment, then install the dependencies:
+A separate environment is recommended so the pipeline dependencies do not conflict with other projects. The current working environment uses **Python 3.11.16**. Exact direct dependency versions are listed in [`requirements.txt`](requirements.txt).
+
+### Recommended: Conda (including VS Code)
+
+Install Conda, clone or download this repository, and open its folder in VS Code. In the integrated terminal, run:
 
 ```bash
-python3 -m venv .venv
+conda env create -f environment.yml
+conda activate fdk-phenotyping
+```
+
+In VS Code, open the Command Palette, choose **Python: Select Interpreter**, and select `fdk-phenotyping`. Activate the environment in each new terminal before running the pipeline.
+
+### Alternative: Python venv
+
+With Python 3.11 installed:
+
+```bash
+python3.11 -m venv .venv
 source .venv/bin/activate
+python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-Dependencies are currently unpinned; an independently reproduced environment has not yet been verified. Interactive review commands also require Python with Tkinter support.
+On Windows, activate with `.venv\Scripts\Activate.ps1` in PowerShell instead of `source`. Interactive review commands require Tkinter; the Conda environment includes Tk. A venv uses the Tk support provided by its Python installation.
+
+The dependencies include NumPy, Pillow, SciPy, scikit-image, scikit-learn, Joblib, PyTorch, Torchvision, and Ultralytics. **scikit-learn 1.9.1 matches the saved model bundles**; other versions can produce model-loading warnings or incompatible results. The pinned versions were read from the local working macOS environment, where an image was successfully scored. A fresh installation and Windows/Linux compatibility have not yet been verified. PyTorch uses Apple MPS when available and otherwise CPU; this script does not select CUDA.
+
+An environment provides the software dependencies; scoring also requires the trained models below. Without them, a fresh clone cannot score images.
 
 Place these trusted model files in `data/models/`:
 
