@@ -1,0 +1,8 @@
+joblib
+numpy
+Pillow
+scikit-image
+scipy
+scikit-learn
+torch
+ultralytics
