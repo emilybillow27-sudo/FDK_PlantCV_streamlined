@@ -8,7 +8,7 @@ Full outlined PNGs use Git LFS. Red means predicted FDK; green means predicted h
 
 `image_scores.csv` contains the numerical results. `input_manifest.csv` defines the 420-image batch. `provenance.json` records source-image and model hashes. Missing rows are unfinished or failed jobs, not zero scores. Local intermediate files and mask archives are excluded.
 
-Completed results currently published: **65 / 420**.
+Completed results currently published: **67 / 420**.
 
 | Sample | Group | Detected count | Predicted FDK (%) | Outlined image |
 |---|---|---:|---:|---|
@@ -73,6 +73,8 @@ Completed results currently published: **65 / 420**.
 | CSU_IL_59 | UIUC | 363 | 26.17 | [View](outlined/CSU_IL_59.png) |
 | CSU_IL_60 | UIUC | 438 | 27.17 | [View](outlined/CSU_IL_60.png) |
 | CSU_IL_61 | UIUC | 416 | 52.16 | [View](outlined/CSU_IL_61.png) |
+| CSU_IL_62 | UIUC | 439 | 40.55 | [View](outlined/CSU_IL_62.png) |
+| CSU_IL_63 | UIUC | 432 | 39.35 | [View](outlined/CSU_IL_63.png) |
 | CSU_NE_2 | UNL | 451 | 33.92 | [View](outlined/CSU_NE_2.png) |
 | CSU_NE_80 | UNL | 381 | 17.32 | [View](outlined/CSU_NE_80.png) |
 | SDSU_Plot_4 | SDSU | 387 | 15.25 | [View](outlined/SDSU_Plot_4.png) |
