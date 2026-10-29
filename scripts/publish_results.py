@@ -68,7 +68,7 @@ A seven-image visual spot check across Illinois, Nebraska and SDSU found recurri
 
 Full outlined PNGs use Git LFS. Red means predicted FDK; green means predicted healthy. Colors are predictions, not reference labels. Run `git lfs pull` after cloning to download the images.
 
-`image_scores.csv` contains the numerical results. `input_manifest.csv` defines the 420-image batch. `provenance.json` records source-image and model hashes. Missing rows are unfinished or failed jobs, not zero scores. Local intermediate files and mask archives are excluded.
+`image_scores.csv` contains the numerical results. `input_manifest.csv` defines the full scoring batch. `provenance.json` records source-image and model hashes. Missing rows are unfinished or failed jobs, not zero scores. Local intermediate files and mask archives are excluded.
 
 '''
     readme += f'Completed results currently published: **{len(rows)} / {len(manifest)}**.\n\n'

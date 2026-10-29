@@ -6,9 +6,9 @@ A seven-image visual spot check across Illinois, Nebraska and SDSU found recurri
 
 Full outlined PNGs use Git LFS. Red means predicted FDK; green means predicted healthy. Colors are predictions, not reference labels. Run `git lfs pull` after cloning to download the images.
 
-`image_scores.csv` contains the numerical results. `input_manifest.csv` defines the 420-image batch. `provenance.json` records source-image and model hashes. Missing rows are unfinished or failed jobs, not zero scores. Local intermediate files and mask archives are excluded.
+`image_scores.csv` contains the numerical results. `input_manifest.csv` defines the full scoring batch. `provenance.json` records source-image and model hashes. Missing rows are unfinished or failed jobs, not zero scores. Local intermediate files and mask archives are excluded.
 
-Completed results currently published: **130 / 420**.
+Completed results currently published: **139 / 451**.
 
 | Sample | Group | Detected count | Predicted FDK (%) | Outlined image |
 |---|---|---:|---:|---|
@@ -138,6 +138,15 @@ Completed results currently published: **130 / 420**.
 | CSU_IL_124 | UIUC | 423 | 11.58 | [View](outlined/CSU_IL_124.png) |
 | CSU_IL_125 | UIUC | 384 | 38.54 | [View](outlined/CSU_IL_125.png) |
 | CSU_IL_126 | UIUC | 370 | 26.76 | [View](outlined/CSU_IL_126.png) |
+| CSU_IL_127 | UIUC | 411 | 26.03 | [View](outlined/CSU_IL_127.png) |
+| CSU_IL_128 | UIUC | 405 | 20.00 | [View](outlined/CSU_IL_128.png) |
+| CSU_IL_129 | UIUC | 420 | 25.71 | [View](outlined/CSU_IL_129.png) |
+| CSU_IL_130 | UIUC | 368 | 36.41 | [View](outlined/CSU_IL_130.png) |
+| CSU_IL_131 | UIUC | 420 | 25.71 | [View](outlined/CSU_IL_131.png) |
+| CSU_IL_132 | UIUC | 437 | 32.95 | [View](outlined/CSU_IL_132.png) |
+| CSU_IL_133 | UIUC | 349 | 32.95 | [View](outlined/CSU_IL_133.png) |
+| CSU_IL_134 | UIUC | 378 | 27.51 | [View](outlined/CSU_IL_134.png) |
+| CSU_IL_135 | UIUC | 379 | 24.27 | [View](outlined/CSU_IL_135.png) |
 | CSU_NE_2 | UNL | 451 | 33.92 | [View](outlined/CSU_NE_2.png) |
 | CSU_NE_80 | UNL | 381 | 17.32 | [View](outlined/CSU_NE_80.png) |
 | SDSU_Plot_4 | SDSU | 387 | 15.25 | [View](outlined/SDSU_Plot_4.png) |
