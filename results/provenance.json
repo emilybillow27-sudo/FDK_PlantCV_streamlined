@@ -2265,6 +2265,94 @@
     "scope": "Sharp, white-background, sufficiently spaced wheat kernels",
     "source_sha256": "439e1321f098fbc75c01f212b997405b04d2253116c35dbb6057f33d8abff7fa"
   },
+  "CSU_NE_52": {
+    "denominator": "All retained detections; review possible non-wheat, fragments and missing kernels before interpreting as wheat FDK percent",
+    "method": "frozen tile detection, IoU/containment dedup, QC, background gate, tile-edge repair, 30-feature FDK classifier",
+    "models_sha256": {
+      "fdk": "7fea2980073610601a38fccf193caf7bf4e3750b213ae18b378d6d43d481cfc5",
+      "qc": "839d42902beb8e4e6576a4982462dbeea02ba8d19ac296c77b5e0a761c319fa4",
+      "yolo": "517c7580a52642273e62ab048ac81db1667eea7b1aa4d8b09eb48ccecfba4124"
+    },
+    "scope": "Sharp, white-background, sufficiently spaced wheat kernels",
+    "source_sha256": "6259dc55c645e60f12285f7f32ddbebe121f2fb576afebfe88f2555aef351e73"
+  },
+  "CSU_NE_53": {
+    "denominator": "All retained detections; review possible non-wheat, fragments and missing kernels before interpreting as wheat FDK percent",
+    "method": "frozen tile detection, IoU/containment dedup, QC, background gate, tile-edge repair, 30-feature FDK classifier",
+    "models_sha256": {
+      "fdk": "7fea2980073610601a38fccf193caf7bf4e3750b213ae18b378d6d43d481cfc5",
+      "qc": "839d42902beb8e4e6576a4982462dbeea02ba8d19ac296c77b5e0a761c319fa4",
+      "yolo": "517c7580a52642273e62ab048ac81db1667eea7b1aa4d8b09eb48ccecfba4124"
+    },
+    "scope": "Sharp, white-background, sufficiently spaced wheat kernels",
+    "source_sha256": "bed31877ca45014707b79cf0e003254666ce810369d29abf4a9a30a893ddcc50"
+  },
+  "CSU_NE_54": {
+    "denominator": "All retained detections; review possible non-wheat, fragments and missing kernels before interpreting as wheat FDK percent",
+    "method": "frozen tile detection, IoU/containment dedup, QC, background gate, tile-edge repair, 30-feature FDK classifier",
+    "models_sha256": {
+      "fdk": "7fea2980073610601a38fccf193caf7bf4e3750b213ae18b378d6d43d481cfc5",
+      "qc": "839d42902beb8e4e6576a4982462dbeea02ba8d19ac296c77b5e0a761c319fa4",
+      "yolo": "517c7580a52642273e62ab048ac81db1667eea7b1aa4d8b09eb48ccecfba4124"
+    },
+    "scope": "Sharp, white-background, sufficiently spaced wheat kernels",
+    "source_sha256": "39e5a708f4d64c4e1a50edfffbeebf46c7a4ced431b9fe7982fc6ec625dbf4af"
+  },
+  "CSU_NE_55": {
+    "denominator": "All retained detections; review possible non-wheat, fragments and missing kernels before interpreting as wheat FDK percent",
+    "method": "frozen tile detection, IoU/containment dedup, QC, background gate, tile-edge repair, 30-feature FDK classifier",
+    "models_sha256": {
+      "fdk": "7fea2980073610601a38fccf193caf7bf4e3750b213ae18b378d6d43d481cfc5",
+      "qc": "839d42902beb8e4e6576a4982462dbeea02ba8d19ac296c77b5e0a761c319fa4",
+      "yolo": "517c7580a52642273e62ab048ac81db1667eea7b1aa4d8b09eb48ccecfba4124"
+    },
+    "scope": "Sharp, white-background, sufficiently spaced wheat kernels",
+    "source_sha256": "bab98f8c760f7294a23bcba4ee84615bf5f67aea45d3f68e8e46cad93e937a27"
+  },
+  "CSU_NE_56": {
+    "denominator": "All retained detections; review possible non-wheat, fragments and missing kernels before interpreting as wheat FDK percent",
+    "method": "frozen tile detection, IoU/containment dedup, QC, background gate, tile-edge repair, 30-feature FDK classifier",
+    "models_sha256": {
+      "fdk": "7fea2980073610601a38fccf193caf7bf4e3750b213ae18b378d6d43d481cfc5",
+      "qc": "839d42902beb8e4e6576a4982462dbeea02ba8d19ac296c77b5e0a761c319fa4",
+      "yolo": "517c7580a52642273e62ab048ac81db1667eea7b1aa4d8b09eb48ccecfba4124"
+    },
+    "scope": "Sharp, white-background, sufficiently spaced wheat kernels",
+    "source_sha256": "55c345fb27cf07414a4c1c1cc895ef6ebe539c7f419f07fb8c740dfa6ef2bedb"
+  },
+  "CSU_NE_57": {
+    "denominator": "All retained detections; review possible non-wheat, fragments and missing kernels before interpreting as wheat FDK percent",
+    "method": "frozen tile detection, IoU/containment dedup, QC, background gate, tile-edge repair, 30-feature FDK classifier",
+    "models_sha256": {
+      "fdk": "7fea2980073610601a38fccf193caf7bf4e3750b213ae18b378d6d43d481cfc5",
+      "qc": "839d42902beb8e4e6576a4982462dbeea02ba8d19ac296c77b5e0a761c319fa4",
+      "yolo": "517c7580a52642273e62ab048ac81db1667eea7b1aa4d8b09eb48ccecfba4124"
+    },
+    "scope": "Sharp, white-background, sufficiently spaced wheat kernels",
+    "source_sha256": "85506aeb634833fb8612f70a6ca5300de7f3979366fefb9b80467f67f5797a13"
+  },
+  "CSU_NE_58": {
+    "denominator": "All retained detections; review possible non-wheat, fragments and missing kernels before interpreting as wheat FDK percent",
+    "method": "frozen tile detection, IoU/containment dedup, QC, background gate, tile-edge repair, 30-feature FDK classifier",
+    "models_sha256": {
+      "fdk": "7fea2980073610601a38fccf193caf7bf4e3750b213ae18b378d6d43d481cfc5",
+      "qc": "839d42902beb8e4e6576a4982462dbeea02ba8d19ac296c77b5e0a761c319fa4",
+      "yolo": "517c7580a52642273e62ab048ac81db1667eea7b1aa4d8b09eb48ccecfba4124"
+    },
+    "scope": "Sharp, white-background, sufficiently spaced wheat kernels",
+    "source_sha256": "aa4a7b7f8e4c8592413b2d42282279024173c230f61098562f168d14fa54f1de"
+  },
+  "CSU_NE_59": {
+    "denominator": "All retained detections; review possible non-wheat, fragments and missing kernels before interpreting as wheat FDK percent",
+    "method": "frozen tile detection, IoU/containment dedup, QC, background gate, tile-edge repair, 30-feature FDK classifier",
+    "models_sha256": {
+      "fdk": "7fea2980073610601a38fccf193caf7bf4e3750b213ae18b378d6d43d481cfc5",
+      "qc": "839d42902beb8e4e6576a4982462dbeea02ba8d19ac296c77b5e0a761c319fa4",
+      "yolo": "517c7580a52642273e62ab048ac81db1667eea7b1aa4d8b09eb48ccecfba4124"
+    },
+    "scope": "Sharp, white-background, sufficiently spaced wheat kernels",
+    "source_sha256": "0473ad4bfbeb8afc8e96fe04bc3b823f72878c127c207bdfd4f7e928e76e0136"
+  },
   "CSU_NE_6": {
     "denominator": "All retained detections; review possible non-wheat, fragments and missing kernels before interpreting as wheat FDK percent",
     "method": "frozen tile detection, IoU/containment dedup, QC, background gate, tile-edge repair, 30-feature FDK classifier",
@@ -2275,6 +2363,17 @@
     },
     "scope": "Sharp, white-background, sufficiently spaced wheat kernels",
     "source_sha256": "af41e300210daed24d93e495e5c99359ee43debd94e933c1b6bdd26552a15514"
+  },
+  "CSU_NE_60": {
+    "denominator": "All retained detections; review possible non-wheat, fragments and missing kernels before interpreting as wheat FDK percent",
+    "method": "frozen tile detection, IoU/containment dedup, QC, background gate, tile-edge repair, 30-feature FDK classifier",
+    "models_sha256": {
+      "fdk": "7fea2980073610601a38fccf193caf7bf4e3750b213ae18b378d6d43d481cfc5",
+      "qc": "839d42902beb8e4e6576a4982462dbeea02ba8d19ac296c77b5e0a761c319fa4",
+      "yolo": "517c7580a52642273e62ab048ac81db1667eea7b1aa4d8b09eb48ccecfba4124"
+    },
+    "scope": "Sharp, white-background, sufficiently spaced wheat kernels",
+    "source_sha256": "60c6ad1b7e8b4bd925592ea83b439bf1b1274189ae1e659d957af5e3fde47938"
   },
   "CSU_NE_7": {
     "denominator": "All retained detections; review possible non-wheat, fragments and missing kernels before interpreting as wheat FDK percent",
