@@ -8,7 +8,7 @@ Full outlined PNGs use Git LFS. Red means predicted FDK; green means predicted h
 
 `image_scores.csv` contains the numerical results. `input_manifest.csv` defines the full scoring batch. `provenance.json` records source-image and model hashes. Missing rows are unfinished or failed jobs, not zero scores. Local intermediate files and mask archives are excluded.
 
-Completed results currently published: **156 / 451**.
+Completed results currently published: **170 / 451**.
 
 | Sample | Group | Detected count | Predicted FDK (%) | Outlined image |
 |---|---|---:|---:|---|
@@ -164,7 +164,21 @@ Completed results currently published: **156 / 451**.
 | CSU_IL_150 | UIUC | 441 | 9.30 | [View](outlined/CSU_IL_150.png) |
 | CSU_IL_151 | UIUC | 363 | 20.11 | [View](outlined/CSU_IL_151.png) |
 | CSU_IL_152 | UIUC | 418 | 27.51 | [View](outlined/CSU_IL_152.png) |
+| CSU_IL_153 | UIUC | 389 | 9.51 | [View](outlined/CSU_IL_153.png) |
+| CSU_IL_154 | UIUC | 331 | 16.62 | [View](outlined/CSU_IL_154.png) |
+| CSU_IL_155 | UIUC | 438 | 19.86 | [View](outlined/CSU_IL_155.png) |
+| CSU_IL_156 | UIUC | 380 | 17.89 | [View](outlined/CSU_IL_156.png) |
+| CSU_IL_157 | UIUC | 382 | 18.59 | [View](outlined/CSU_IL_157.png) |
+| CSU_IL_158 | UIUC | 465 | 29.03 | [View](outlined/CSU_IL_158.png) |
+| CSU_IL_159 | UIUC | 404 | 48.27 | [View](outlined/CSU_IL_159.png) |
+| CSU_IL_160 | UIUC | 385 | 16.36 | [View](outlined/CSU_IL_160.png) |
 | CSU_NE_2 | UNL | 451 | 33.92 | [View](outlined/CSU_NE_2.png) |
+| CSU_NE_3 | UNL | 381 | 27.56 | [View](outlined/CSU_NE_3.png) |
+| CSU_NE_4 | UNL | 203 | 22.66 | [View](outlined/CSU_NE_4.png) |
+| CSU_NE_5 | UNL | 246 | 16.26 | [View](outlined/CSU_NE_5.png) |
+| CSU_NE_6 | UNL | 379 | 24.80 | [View](outlined/CSU_NE_6.png) |
+| CSU_NE_7 | UNL | 340 | 61.18 | [View](outlined/CSU_NE_7.png) |
+| CSU_NE_8 | UNL | 108 | 16.67 | [View](outlined/CSU_NE_8.png) |
 | CSU_NE_80 | UNL | 381 | 17.32 | [View](outlined/CSU_NE_80.png) |
 | SDSU_Plot_4 | SDSU | 387 | 15.25 | [View](outlined/SDSU_Plot_4.png) |
 | SDSU_Plot_80 | SDSU | 282 | 31.21 | [View](outlined/SDSU_Plot_80.png) |
