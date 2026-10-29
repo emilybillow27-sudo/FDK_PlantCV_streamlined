@@ -8,7 +8,7 @@ Full outlined PNGs use Git LFS. Red means predicted FDK; green means predicted h
 
 `image_scores.csv` contains the numerical results. `input_manifest.csv` defines the full scoring batch. `provenance.json` records source-image and model hashes. Missing rows are unfinished or failed jobs, not zero scores. Local intermediate files and mask archives are excluded.
 
-Completed results currently published: **420 / 451**.
+Completed results currently published: **451 / 451**.
 
 | Sample | Group | Detected count | Predicted FDK (%) | Outlined image |
 |---|---|---:|---:|---|
@@ -432,3 +432,34 @@ Completed results currently published: **420 / 451**.
 | SDSU_Plot_129 | SDSU | 238 | 16.39 | [View](outlined/SDSU_Plot_129.png) |
 | SDSU_Plot_125 | SDSU | 335 | 17.31 | [View](outlined/SDSU_Plot_125.png) |
 | SDSU_Unlabeled_IMG_0621 | SDSU | 303 | 28.71 | [View](outlined/SDSU_Unlabeled_IMG_0621.png) |
+| SDSU_Plot_78 | SDSU | 303 | 28.71 | [View](outlined/SDSU_Plot_78.png) |
+| SDSU_Plot_39 | SDSU | 259 | 52.12 | [View](outlined/SDSU_Plot_39.png) |
+| SDSU_Plot_145 | SDSU | 304 | 25.33 | [View](outlined/SDSU_Plot_145.png) |
+| SDSU_Plot_76 | SDSU | 314 | 37.58 | [View](outlined/SDSU_Plot_76.png) |
+| SDSU_Label_Everest_7_1 | SDSU | 265 | 39.25 | [View](outlined/SDSU_Label_Everest_7_1.png) |
+| SDSU_Plot_46 | SDSU | 259 | 53.67 | [View](outlined/SDSU_Plot_46.png) |
+| SDSU_Plot_148 | SDSU | 56 | 25.00 | [View](outlined/SDSU_Plot_148.png) |
+| SDSU_Plot_127 | SDSU | 409 | 47.43 | [View](outlined/SDSU_Plot_127.png) |
+| SDSU_Plot_47 | SDSU | 268 | 45.15 | [View](outlined/SDSU_Plot_47.png) |
+| SDSU_Plot_27 | SDSU | 311 | 26.69 | [View](outlined/SDSU_Plot_27.png) |
+| SDSU_Plot_77 | SDSU | 312 | 34.62 | [View](outlined/SDSU_Plot_77.png) |
+| SDSU_Plot_57 | SDSU | 346 | 43.93 | [View](outlined/SDSU_Plot_57.png) |
+| SDSU_Plot_12 | SDSU | 288 | 36.11 | [View](outlined/SDSU_Plot_12.png) |
+| SDSU_Plot_137 | SDSU | 324 | 35.49 | [View](outlined/SDSU_Plot_137.png) |
+| SDSU_Plot_8 | SDSU | 267 | 37.45 | [View](outlined/SDSU_Plot_8.png) |
+| SDSU_Plot_85 | SDSU | 228 | 34.21 | [View](outlined/SDSU_Plot_85.png) |
+| SDSU_Plot_105 | SDSU | 219 | 26.94 | [View](outlined/SDSU_Plot_105.png) |
+| SDSU_Plot_11 | SDSU | 263 | 39.54 | [View](outlined/SDSU_Plot_11.png) |
+| SDSU_Label_Emerson_13_4 | SDSU | 346 | 15.32 | [View](outlined/SDSU_Label_Emerson_13_4.png) |
+| SDSU_Plot_2 | SDSU | 204 | 58.82 | [View](outlined/SDSU_Plot_2.png) |
+| SDSU_Plot_116 | SDSU | 308 | 22.08 | [View](outlined/SDSU_Plot_116.png) |
+| SDSU_Plot_55 | SDSU | 339 | 35.69 | [View](outlined/SDSU_Plot_55.png) |
+| SDSU_Plot_109 | SDSU | 297 | 31.65 | [View](outlined/SDSU_Plot_109.png) |
+| SDSU_Plot_160 | SDSU | 268 | 36.94 | [View](outlined/SDSU_Plot_160.png) |
+| SDSU_Plot_67 | SDSU | 315 | 27.30 | [View](outlined/SDSU_Plot_67.png) |
+| SDSU_Plot_23 | SDSU | 310 | 44.52 | [View](outlined/SDSU_Plot_23.png) |
+| SDSU_Plot_73 | SDSU | 300 | 25.67 | [View](outlined/SDSU_Plot_73.png) |
+| SDSU_Label_Emerson_2_3 | SDSU | 313 | 26.52 | [View](outlined/SDSU_Label_Emerson_2_3.png) |
+| SDSU_Label_Everest_13_1 | SDSU | 301 | 32.23 | [View](outlined/SDSU_Label_Everest_13_1.png) |
+| SDSU_Label_Flourish_2_2 | SDSU | 258 | 32.95 | [View](outlined/SDSU_Label_Flourish_2_2.png) |
+| SDSU_Label_Flourish_13_3 | SDSU | 267 | 29.21 | [View](outlined/SDSU_Label_Flourish_13_3.png) |
