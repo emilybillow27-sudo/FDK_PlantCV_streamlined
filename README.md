@@ -117,3 +117,9 @@ The local batch originally used `CSU_IL_` and `CSU_NE_` sample prefixes for thes
 ## Preliminary batch results
 
 [View outlined images, detected counts, and predicted FDK percentages](results/README.md). Results are published as scoring completes and remain preliminary automated predictions. See the results page for segmentation limitations and denominator definitions.
+
+## Segmentation update
+
+New scoring runs use `larger_repair_component_cleanup_v1`: tile-edge repairs allow up to 2.5 times the old mask area, with at least 85% old-mask coverage for expansions above 1.6 times (otherwise 65%). Existing overlap, border, QC and background safeguards remain. After repair, eight-connected component cleanup removes other components only when the largest contains at least 95% of mask pixels. Detection order and count stay fixed; classifier features and non-wheat review flags are recomputed from the final masks. QC/background selection precedes final cleanup.
+
+Results record the segmentation version, code hash, and per-mask cleanup audit. These changes have encouraging development-region and targeted visual review results, but independent segmentation and FDK classification accuracy have not been established. Scores can change when masks change. Existing completed results are skipped unless explicitly overwritten; the already-running 451-image batch is pinned to its original pipeline for consistency.

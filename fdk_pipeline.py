@@ -22,6 +22,7 @@ import numpy as np
 from PIL import Image, ImageOps
 from skimage.color import rgb2lab
 from skimage.measure import regionprops
+from scipy.ndimage import label as connected_components
 
 warnings.filterwarnings("ignore", message=".*major_axis_length.*deprecated.*", category=FutureWarning)
 warnings.filterwarnings("ignore", message=".*minor_axis_length.*deprecated.*", category=FutureWarning)
@@ -32,6 +33,9 @@ QC_MODEL_PATH = DATA / "models" / "segmentation_qc_v2.joblib"
 FDK_MODEL_PATH = DATA / "models" / "fdk_classifier_468_labels.joblib"
 YOLO_WEIGHTS = DATA / "models" / "best.pt"
 WEED_MODEL_PATH = DATA / "models" / "weed_gate_sdsu_candidate.joblib"
+SEGMENTATION_VERSION = "larger_repair_component_cleanup_v1"
+REPAIR_MAX_AREA_RATIO = 2.50
+CLEANUP_MIN_MAIN_FRACTION = 0.95
 IOU_THRESHOLD = 0.40
 CONTAINMENT_THRESHOLD = 0.80
 QC_THRESHOLD = 0.975
@@ -657,7 +661,7 @@ def infer_tile(model, rgb, x0, y0, image_shape, device, old):
         y1, y2 = y0 + int(yy.min()), y0 + int(yy.max()) + 1
         area = len(xx)
         if (x2 <= old_x1 or x1 >= old_x2 or y2 <= old_y1 or y1 >= old_y2
-                or not 0.75 <= area / old["area"] <= 1.60):
+                or not 0.75 <= area / old["area"] <= REPAIR_MAX_AREA_RATIO):
             continue
         full = np.zeros(image_shape[:2], dtype=bool)
         full[y0:y0 + TILE_SIZE, x0:x0 + TILE_SIZE] = local
@@ -678,12 +682,13 @@ def tile_origin(det, xs, ys):
 
 def check_candidate(old, candidate, candidate_pos, original_pos, edges,
                     revised, index, image_shape, lab, qc_model, frozen):
-    if not 0.75 <= candidate["area"] / old["area"] <= 1.60:
+    if not 0.75 <= candidate["area"] / old["area"] <= REPAIR_MAX_AREA_RATIO:
         return "area", 0.0, 0.0
     iou, coverage = bbox_and_mask_overlap(old, candidate)
     if iou < 0.40:
         return "mask_iou", iou, coverage
-    if coverage < 0.65:
+    minimum_coverage = 0.85 if candidate["area"] / old["area"] > 1.60 else 0.65
+    if coverage < minimum_coverage:
         return "old_coverage", iou, coverage
     if border_cuts(candidate, *candidate_pos, image_shape):
         return "candidate_still_cut", iou, coverage
@@ -829,6 +834,35 @@ def repair_masks(baseline, raw, rgb, lab, qc_model, frozen, repair, model, devic
             changed[index] = source
     return revised, changed
 
+
+
+def cleanup_mask_components(detections):
+    """Remove small disconnected islands without removing or reordering detections."""
+    revised, changes = [], []
+    for index, det in enumerate(detections):
+        x1, y1, x2, y2 = map(int, det["bbox"])
+        local = det["mask"][y1:y2, x1:x2]
+        components, count = connected_components(local, structure=np.ones((3, 3)))
+        sizes = np.bincount(components.ravel())
+        sizes[0] = 0
+        area = int(local.sum())
+        if not area:
+            raise ValueError("Cannot clean an empty retained mask")
+        largest = int(sizes.argmax())
+        fraction = int(sizes[largest]) / area
+        if count <= 1 or fraction < CLEANUP_MIN_MAIN_FRACTION:
+            revised.append(det)
+            continue
+        main = components == largest
+        yy, xx = np.nonzero(main)
+        cleaned = np.zeros_like(det["mask"], dtype=bool)
+        cleaned[y1:y2, x1:x2] = main
+        bbox = (x1 + int(xx.min()), y1 + int(yy.min()),
+                x1 + int(xx.max()) + 1, y1 + int(yy.max()) + 1)
+        revised.append({**det, "mask": cleaned, "bbox": bbox, "area": int(main.sum())})
+        changes.append({"index": index, "removed_pixels": area - int(main.sum()),
+                        "largest_component_fraction": fraction})
+    return revised, changes
 
 
 def file_sha256(path):
@@ -1007,6 +1041,8 @@ def score_image(source, sample, overwrite=False):
         raise ValueError("No retained detections; inspect the input photo and background")
     print(f"{len(baseline)} retained masks; checking tile-edge repairs", flush=True)
     revised, changed = repair_masks(baseline, raw, rgb, lab, qc_model, None, None, model, device)
+    revised, cleanup_changes = cleanup_mask_components(revised)
+    print(f"Component cleanup: {len(cleanup_changes)} masks cleaned", flush=True)
     render_stage(
         rgb,
         revised,
@@ -1050,12 +1086,14 @@ def score_image(source, sample, overwrite=False):
         rows.append(row)
     pack_masks(revised, rgb.shape, out / "kernel_masks.npz")
     write_csv(out / "kernel_predictions.csv", rows)
+    (out / "component_cleanup.json").write_text(json.dumps(cleanup_changes, indent=2) + "\n")
     summary = {"sample_id": sample, "image_path": str(source),
                "detected_objects": len(revised), "fdk_calls": int(predicted.sum()),
                "fdk_percent_all_retained_objects": 100 * float(predicted.mean()),
                "mean_fdk_probability_percent": 100 * float(probability.mean()),
                "qc_excluded": len(qc_rejected), "background_excluded": len(background_rejected),
-               "recentered": len(changed), "non_wheat_review_flags": "" if gate_probability is None else
+               "recentered": len(changed), "component_cleaned": len(cleanup_changes),
+               "segmentation_version": SEGMENTATION_VERSION, "non_wheat_review_flags": "" if gate_probability is None else
                    int((gate_probability >= float(gate["threshold"])).sum())}
     print("Writing mask archive and outlined image", flush=True)
     render_overlay(rgb, revised, predicted, out / "kernels_outlined_red_FDK_green_healthy.png")
@@ -1069,7 +1107,9 @@ def score_image(source, sample, overwrite=False):
         "source_sha256": file_sha256(source),
         "models_sha256": {name: file_sha256(path) for name, path in
                           (("yolo", YOLO_WEIGHTS), ("qc", QC_MODEL_PATH), ("fdk", FDK_MODEL_PATH))},
-        "method": "frozen tile detection, IoU/containment dedup, QC, background gate, tile-edge repair, 30-feature FDK classifier",
+        "method": "frozen tile detection, IoU/containment dedup, QC, background gate, larger-mask tile-edge repair, 95% main-component cleanup, 30-feature FDK classifier",
+        "segmentation_version": SEGMENTATION_VERSION,
+        "pipeline_sha256": file_sha256(Path(__file__)),
         "scope": "Sharp, white-background, sufficiently spaced wheat kernels",
         "denominator": "All retained detections; review possible non-wheat, fragments and missing kernels before interpreting as wheat FDK percent",
     }, indent=2) + "\n")
