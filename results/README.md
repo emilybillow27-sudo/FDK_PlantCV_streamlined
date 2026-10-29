@@ -8,7 +8,7 @@ Full outlined PNGs use Git LFS. Red means predicted FDK; green means predicted h
 
 `image_scores.csv` contains the numerical results. `input_manifest.csv` defines the full scoring batch. `provenance.json` records source-image and model hashes. Missing rows are unfinished or failed jobs, not zero scores. Local intermediate files and mask archives are excluded.
 
-Completed results currently published: **358 / 451**.
+Completed results currently published: **373 / 451**.
 
 | Sample | Group | Detected count | Predicted FDK (%) | Outlined image |
 |---|---|---:|---:|---|
@@ -368,5 +368,20 @@ Completed results currently published: **358 / 451**.
 | SDSU_Plot_104 | SDSU | 358 | 20.95 | [View](outlined/SDSU_Plot_104.png) |
 | SDSU_Plot_158 | SDSU | 326 | 32.52 | [View](outlined/SDSU_Plot_158.png) |
 | SDSU_Plot_140 | SDSU | 331 | 29.91 | [View](outlined/SDSU_Plot_140.png) |
+| SDSU_Plot_128 | SDSU | 279 | 28.67 | [View](outlined/SDSU_Plot_128.png) |
+| SDSU_Plot_43 | SDSU | 356 | 16.85 | [View](outlined/SDSU_Plot_43.png) |
+| SDSU_Plot_31 | SDSU | 283 | 31.80 | [View](outlined/SDSU_Plot_31.png) |
+| SDSU_Label_Overley_7_2 | SDSU | 268 | 35.07 | [View](outlined/SDSU_Label_Overley_7_2.png) |
+| SDSU_Plot_107 | SDSU | 368 | 31.79 | [View](outlined/SDSU_Plot_107.png) |
+| SDSU_Plot_26 | SDSU | 238 | 29.41 | [View](outlined/SDSU_Plot_26.png) |
+| SDSU_Plot_13 | SDSU | 340 | 28.53 | [View](outlined/SDSU_Plot_13.png) |
+| SDSU_Plot_132 | SDSU | 328 | 36.89 | [View](outlined/SDSU_Plot_132.png) |
+| SDSU_Plot_48 | SDSU | 340 | 34.41 | [View](outlined/SDSU_Plot_48.png) |
+| SDSU_Plot_121 | SDSU | 268 | 24.63 | [View](outlined/SDSU_Plot_121.png) |
+| SDSU_Plot_7 | SDSU | 263 | 40.68 | [View](outlined/SDSU_Plot_7.png) |
+| SDSU_Plot_5 | SDSU | 332 | 28.31 | [View](outlined/SDSU_Plot_5.png) |
+| SDSU_Plot_79 | SDSU | 302 | 22.19 | [View](outlined/SDSU_Plot_79.png) |
+| SDSU_Plot_119 | SDSU | 249 | 25.30 | [View](outlined/SDSU_Plot_119.png) |
+| SDSU_Plot_110 | SDSU | 278 | 26.98 | [View](outlined/SDSU_Plot_110.png) |
 | SDSU_Plot_4 | SDSU | 387 | 15.25 | [View](outlined/SDSU_Plot_4.png) |
 | SDSU_Plot_80 | SDSU | 282 | 31.21 | [View](outlined/SDSU_Plot_80.png) |
