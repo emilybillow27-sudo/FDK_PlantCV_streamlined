@@ -8,7 +8,7 @@ Full outlined PNGs use Git LFS. Red means predicted FDK; green means predicted h
 
 `image_scores.csv` contains the numerical results. `input_manifest.csv` defines the full scoring batch. `provenance.json` records source-image and model hashes. Missing rows are unfinished or failed jobs, not zero scores. Local intermediate files and mask archives are excluded.
 
-Completed results currently published: **408 / 451**.
+Completed results currently published: **420 / 451**.
 
 | Sample | Group | Detected count | Predicted FDK (%) | Outlined image |
 |---|---|---:|---:|---|
@@ -420,3 +420,15 @@ Completed results currently published: **408 / 451**.
 | SDSU_Plot_136 | SDSU | 286 | 28.67 | [View](outlined/SDSU_Plot_136.png) |
 | SDSU_Plot_156 | SDSU | 270 | 15.93 | [View](outlined/SDSU_Plot_156.png) |
 | SDSU_Plot_80 | SDSU | 282 | 31.21 | [View](outlined/SDSU_Plot_80.png) |
+| SDSU_Plot_92 | SDSU | 245 | 54.69 | [View](outlined/SDSU_Plot_92.png) |
+| SDSU_Plot_33 | SDSU | 284 | 16.90 | [View](outlined/SDSU_Plot_33.png) |
+| SDSU_Plot_123 | SDSU | 260 | 14.62 | [View](outlined/SDSU_Plot_123.png) |
+| SDSU_Plot_66 | SDSU | 281 | 38.43 | [View](outlined/SDSU_Plot_66.png) |
+| SDSU_Plot_90 | SDSU | 306 | 31.05 | [View](outlined/SDSU_Plot_90.png) |
+| SDSU_Plot_16 | SDSU | 306 | 24.18 | [View](outlined/SDSU_Plot_16.png) |
+| SDSU_Plot_25 | SDSU | 240 | 14.58 | [View](outlined/SDSU_Plot_25.png) |
+| SDSU_Plot_138 | SDSU | 413 | 31.72 | [View](outlined/SDSU_Plot_138.png) |
+| SDSU_Plot_100 | SDSU | 316 | 24.05 | [View](outlined/SDSU_Plot_100.png) |
+| SDSU_Plot_129 | SDSU | 238 | 16.39 | [View](outlined/SDSU_Plot_129.png) |
+| SDSU_Plot_125 | SDSU | 335 | 17.31 | [View](outlined/SDSU_Plot_125.png) |
+| SDSU_Unlabeled_IMG_0621 | SDSU | 303 | 28.71 | [View](outlined/SDSU_Unlabeled_IMG_0621.png) |
