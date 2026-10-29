@@ -8,7 +8,7 @@ Full outlined PNGs use Git LFS. Red means predicted FDK; green means predicted h
 
 `image_scores.csv` contains the numerical results. `input_manifest.csv` defines the full scoring batch. `provenance.json` records source-image and model hashes. Missing rows are unfinished or failed jobs, not zero scores. Local intermediate files and mask archives are excluded.
 
-Completed results currently published: **170 / 451**.
+Completed results currently published: **185 / 451**.
 
 | Sample | Group | Detected count | Predicted FDK (%) | Outlined image |
 |---|---|---:|---:|---|
@@ -179,6 +179,21 @@ Completed results currently published: **170 / 451**.
 | CSU_NE_6 | UNL | 379 | 24.80 | [View](outlined/CSU_NE_6.png) |
 | CSU_NE_7 | UNL | 340 | 61.18 | [View](outlined/CSU_NE_7.png) |
 | CSU_NE_8 | UNL | 108 | 16.67 | [View](outlined/CSU_NE_8.png) |
+| CSU_NE_9 | UNL | 240 | 21.67 | [View](outlined/CSU_NE_9.png) |
+| CSU_NE_10 | UNL | 420 | 45.95 | [View](outlined/CSU_NE_10.png) |
+| CSU_NE_11 | UNL | 522 | 36.97 | [View](outlined/CSU_NE_11.png) |
+| CSU_NE_12 | UNL | 590 | 34.92 | [View](outlined/CSU_NE_12.png) |
+| CSU_NE_13 | UNL | 484 | 55.37 | [View](outlined/CSU_NE_13.png) |
+| CSU_NE_14 | UNL | 508 | 22.44 | [View](outlined/CSU_NE_14.png) |
+| CSU_NE_15 | UNL | 121 | 23.14 | [View](outlined/CSU_NE_15.png) |
+| CSU_NE_16 | UNL | 376 | 9.31 | [View](outlined/CSU_NE_16.png) |
+| CSU_NE_17 | UNL | 365 | 11.51 | [View](outlined/CSU_NE_17.png) |
+| CSU_NE_18 | UNL | 471 | 16.35 | [View](outlined/CSU_NE_18.png) |
+| CSU_NE_19 | UNL | 390 | 24.87 | [View](outlined/CSU_NE_19.png) |
+| CSU_NE_20 | UNL | 371 | 18.87 | [View](outlined/CSU_NE_20.png) |
+| CSU_NE_21 | UNL | 393 | 33.08 | [View](outlined/CSU_NE_21.png) |
+| CSU_NE_22 | UNL | 411 | 15.57 | [View](outlined/CSU_NE_22.png) |
+| CSU_NE_23 | UNL | 377 | 9.28 | [View](outlined/CSU_NE_23.png) |
 | CSU_NE_80 | UNL | 381 | 17.32 | [View](outlined/CSU_NE_80.png) |
 | SDSU_Plot_4 | SDSU | 387 | 15.25 | [View](outlined/SDSU_Plot_4.png) |
 | SDSU_Plot_80 | SDSU | 282 | 31.21 | [View](outlined/SDSU_Plot_80.png) |
