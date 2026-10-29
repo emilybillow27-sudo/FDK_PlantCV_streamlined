@@ -8,7 +8,7 @@ Full outlined PNGs use Git LFS. Red means predicted FDK; green means predicted h
 
 `image_scores.csv` contains the numerical results. `input_manifest.csv` defines the 420-image batch. `provenance.json` records source-image and model hashes. Missing rows are unfinished or failed jobs, not zero scores. Local intermediate files and mask archives are excluded.
 
-Completed results currently published: **92 / 420**.
+Completed results currently published: **100 / 420**.
 
 | Sample | Group | Detected count | Predicted FDK (%) | Outlined image |
 |---|---|---:|---:|---|
@@ -100,6 +100,14 @@ Completed results currently published: **92 / 420**.
 | CSU_IL_86 | UIUC | 472 | 13.98 | [View](outlined/CSU_IL_86.png) |
 | CSU_IL_87 | UIUC | 472 | 17.37 | [View](outlined/CSU_IL_87.png) |
 | CSU_IL_88 | UIUC | 458 | 15.07 | [View](outlined/CSU_IL_88.png) |
+| CSU_IL_89 | UIUC | 426 | 26.53 | [View](outlined/CSU_IL_89.png) |
+| CSU_IL_90 | UIUC | 473 | 23.26 | [View](outlined/CSU_IL_90.png) |
+| CSU_IL_91 | UIUC | 416 | 10.58 | [View](outlined/CSU_IL_91.png) |
+| CSU_IL_92 | UIUC | 480 | 18.33 | [View](outlined/CSU_IL_92.png) |
+| CSU_IL_93 | UIUC | 481 | 40.12 | [View](outlined/CSU_IL_93.png) |
+| CSU_IL_94 | UIUC | 460 | 48.91 | [View](outlined/CSU_IL_94.png) |
+| CSU_IL_95 | UIUC | 385 | 48.57 | [View](outlined/CSU_IL_95.png) |
+| CSU_IL_96 | UIUC | 380 | 8.68 | [View](outlined/CSU_IL_96.png) |
 | CSU_NE_2 | UNL | 451 | 33.92 | [View](outlined/CSU_NE_2.png) |
 | CSU_NE_80 | UNL | 381 | 17.32 | [View](outlined/CSU_NE_80.png) |
 | SDSU_Plot_4 | SDSU | 387 | 15.25 | [View](outlined/SDSU_Plot_4.png) |
