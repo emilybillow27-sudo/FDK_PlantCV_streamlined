@@ -8,7 +8,7 @@ Full outlined PNGs use Git LFS. Red means predicted FDK; green means predicted h
 
 `image_scores.csv` contains the numerical results. `input_manifest.csv` defines the full scoring batch. `provenance.json` records source-image and model hashes. Missing rows are unfinished or failed jobs, not zero scores. Local intermediate files and mask archives are excluded.
 
-Completed results currently published: **255 / 451**.
+Completed results currently published: **265 / 451**.
 
 | Sample | Group | Detected count | Predicted FDK (%) | Outlined image |
 |---|---|---:|---:|---|
@@ -265,5 +265,15 @@ Completed results currently published: **255 / 451**.
 | CSU_NE_93 | UNL | 434 | 15.90 | [View](outlined/CSU_NE_93.png) |
 | CSU_NE_94 | UNL | 401 | 14.21 | [View](outlined/CSU_NE_94.png) |
 | CSU_NE_95 | UNL | 431 | 19.49 | [View](outlined/CSU_NE_95.png) |
+| CSU_NE_96 | UNL | 432 | 24.77 | [View](outlined/CSU_NE_96.png) |
+| CSU_NE_97 | UNL | 489 | 12.07 | [View](outlined/CSU_NE_97.png) |
+| CSU_NE_98 | UNL | 409 | 28.36 | [View](outlined/CSU_NE_98.png) |
+| CSU_NE_99 | UNL | 368 | 10.05 | [View](outlined/CSU_NE_99.png) |
+| CSU_NE_100 | UNL | 368 | 16.03 | [View](outlined/CSU_NE_100.png) |
+| CSU_NE_101 | UNL | 329 | 18.54 | [View](outlined/CSU_NE_101.png) |
+| CSU_NE_102 | UNL | 380 | 13.42 | [View](outlined/CSU_NE_102.png) |
+| CSU_NE_103 | UNL | 42 | 7.14 | [View](outlined/CSU_NE_103.png) |
+| CSU_NE_104 | UNL | 310 | 3.23 | [View](outlined/CSU_NE_104.png) |
+| CSU_NE_105 | UNL | 415 | 12.05 | [View](outlined/CSU_NE_105.png) |
 | SDSU_Plot_4 | SDSU | 387 | 15.25 | [View](outlined/SDSU_Plot_4.png) |
 | SDSU_Plot_80 | SDSU | 282 | 31.21 | [View](outlined/SDSU_Plot_80.png) |
